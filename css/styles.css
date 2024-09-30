@@ -228,3 +228,8 @@ h2 {
     transition: 0.2s;
   }
 }
+@media (max-width: 393px) {
+  .big-text {
+    margin-left: -12%;
+  }
+}
