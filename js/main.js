@@ -1,3 +1,4 @@
+// INDEX AND NAVBAR
 function myFunction() {
   document.getElementById("mydropdown-content").classList.toggle("show");
 }
@@ -30,4 +31,28 @@ let sidebarmenu = document.querySelector("#sidebarmobile");
 sidebar.onclick = () => {
   sidebar.classList.toggle("bx-x");
   sidebarmenu.classList.toggle("open");
+};
+
+// ILLUSTRATION PAGE
+var modal = document.getElementById("myModal");
+
+var images = document.getElementsByClassName("imgthumbnail");
+var modalImg = document.getElementById("imgsrc");
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  img.onclick = function (evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  };
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 };
