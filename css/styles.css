@@ -229,9 +229,9 @@ button.dropbtn2 {
 .modal-content {
   display: block;
   margin: auto;
+  max-width: 800px;
+  width: 100%;
   height: auto;
-  width: 90%;
-  max-width: 900px;
 }
 .close {
   position: absolute;
