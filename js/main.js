@@ -10,7 +10,6 @@ window.onclick = function (e) {
     }
   }
 };
-
 var dropdown2 = document.getElementsByClassName("dropbtn2");
 var i;
 
@@ -35,24 +34,39 @@ sidebar.onclick = () => {
 
 // ILLUSTRATION PAGE
 var modal = document.getElementById("myModal");
-
-var images = document.getElementsByClassName("imgthumbnail");
+var images1 = document.getElementsByClassName("img-landscape");
+var images2 = document.getElementsByClassName("img-portrait")
 var modalImg = document.getElementById("imgsrc");
-for (var i = 0; i < images.length; i++) {
-  var img = images[i];
+for (var i = 0; i < images1.length; i++) {
+  var img = images1[i];
   img.onclick = function (evt) {
     modal.style.display = "block";
     modalImg.src = this.src;
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100%";
+  };
+}
+for (var i = 0; i < images2.length; i++) {
+  var img = images2[i];
+  img.onclick = function (evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100%";
   };
 }
 
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
   modal.style.display = "none";
+  document.body.style.overflow = "auto";
+  document.body.style.height = "auto";
 };
 
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    document.body.style.overflow = "auto";
+    document.body.style.height = "auto";
   }
 };
